@@ -1,6 +1,6 @@
 ---
-import Map from './src/components/Map.astro'
-import enUs from './src/assets/lang/en_us.json';
+import Map from '@components/Map.astro'
+import enUs from '@assets/lang/en_us.json';
 ---
 
 <link rel="stylesheet" href="/src/styles/global.css">
@@ -9,7 +9,7 @@ import enUs from './src/assets/lang/en_us.json';
     <div class="flex justify-center">
         <div class="text-left">
 
-            <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl opacity-25">
+            <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-light opacity-25">
                 <p>{enUs.contact_us.contact}</p>
             </div>
 
@@ -18,13 +18,14 @@ import enUs from './src/assets/lang/en_us.json';
             </div>
 
             <div class="text-base pt-7">
-                <p><b>{enUs.contact_us.business_name}</b><br>{enUs.contact_us.address}</p>
-                <p class="pt-8"><b>{enUs.contact_us.phone_number}</b></p> 
-                <p class="pt-7">{enUs.contact_us.email}</p>
+                <p class="text-lg font-bold">{enUs.contact_us.business_name}</p>
+                <p class="font-light">{enUs.contact_us.address}</p>
+                <p class="text-lg font-bold pt-8">{enUs.contact_us.phone_number}</p>
+                <p class="font-light pt-7">{enUs.contact_us.email}</p>
             </div>
 
             <div class="pt-5">
-                <button class="bg-black text-white py-4 px-12 rounded text-xs">{enUs.contact_us.contact_button}</button>
+                <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">{enUs.contact_us.contact_button}</button>
             </div>
         </div>
     </div>
