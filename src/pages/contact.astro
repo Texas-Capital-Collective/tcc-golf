@@ -1,5 +1,6 @@
 ---
 import Map from './src/components/Map.astro'
+import enUs from './src/assets/lang/en_us.json';
 ---
 
 <link rel="stylesheet" href="/src/styles/global.css">
@@ -9,23 +10,21 @@ import Map from './src/components/Map.astro'
         <div class="text-left">
 
             <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl opacity-25">
-                <p> Contact </p>
+                <p>{enUs.contact_us.contact}</p>
             </div>
 
             <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">
-                <p><b> Information </b></p>
+                <p><b>{enUs.contact_us.information}</b></p>
             </div>
 
             <div class="text-base pt-7">
-                <p><b>Academy Dallas Golf</b><br>713 Hebron Pkwy #242, Lewisville, Texas 75057</p>
-                <p class="pt-8"> <b> 214.223.4101 </b> </p> 
-                <p class="pt-7"> sampleemail@gmail.com </p>
+                <p><b>{enUs.contact_us.business_name}</b><br>{enUs.contact_us.address}</p>
+                <p class="pt-8"><b>{enUs.contact_us.phone_number}</b></p> 
+                <p class="pt-7">{enUs.contact_us.email}</p>
             </div>
 
             <div class="pt-5">
-                <button class="bg-black text-white py-4 px-12 rounded text-xs" >
-                    CONTACT US
-                </button>
+                <button class="bg-black text-white py-4 px-12 rounded text-xs">{enUs.contact_us.contact_button}</button>
             </div>
         </div>
     </div>

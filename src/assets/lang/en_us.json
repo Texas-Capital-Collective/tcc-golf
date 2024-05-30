@@ -1,5 +1,11 @@
 {
   "contact_us": {
-    "contact": "Contact"
+    "contact": "Contact",
+    "information": "Information",
+    "business_name": "Academy Dallas Golf",
+    "address": "713 Hebron Pkwy #242, Lewisville, Texas 75057",
+    "phone_number": "214.223.4101",
+    "email": "sampleemail@gmail.com",
+    "contact_button": "CONTACT US"
   }
 }
