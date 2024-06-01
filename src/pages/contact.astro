@@ -1,39 +1,41 @@
 ---
 import Map from '@components/Map.astro'
 import enUs from '@assets/lang/en_us.json';
+import Layout from "../layouts/Layout.astro";
 ---
+<Layout title="Welcome to Astro.">
 
-<link rel="stylesheet" href="/src/styles/global.css">
-<div class="flex grid grid-cols-2 grid-rows-1 justify-around py-4 font-sans">
-    
-    <div class="flex justify-center">
-        <div class="text-left">
+    <div class="flex grid grid-cols-2 grid-rows-1 justify-around py-4 font-sans">
 
-            <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-light opacity-25">
-                <p>{enUs.contact_us.contact}</p>
-            </div>
+        <div class="flex justify-center">
+            <div class="text-left">
 
-            <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">
-                <p><b>{enUs.contact_us.information}</b></p>
-            </div>
+                <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-light opacity-25">
+                    <p>{enUs.contact_us.contact}</p>
+                </div>
 
-            <div class="text-base pt-7">
-                <p class="text-lg font-bold">{enUs.contact_us.business_name}</p>
-                <p class="font-light">{enUs.contact_us.address}</p>
-                <p class="text-lg font-bold pt-8">{enUs.contact_us.phone_number}</p>
-                <p class="font-light pt-7">{enUs.contact_us.email}</p>
-            </div>
+                <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl">
+                    <p><b>{enUs.contact_us.information}</b></p>
+                </div>
 
-            <div class="pt-5">
-                <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">{enUs.contact_us.contact_button}</button>
+                <div class="text-base pt-7">
+                    <p class="text-lg font-bold">{enUs.contact_us.business_name}</p>
+                    <p class="font-light">{enUs.contact_us.address}</p>
+                    <p class="text-lg font-bold pt-8">{enUs.contact_us.phone_number}</p>
+                    <p class="font-light pt-7">{enUs.contact_us.email}</p>
+                </div>
+
+                <div class="pt-5">
+                    <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">{enUs.contact_us.contact_button}</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="flex justify-center pr-4">
-        <div class = "w-full h-full"> 
-            <Map></Map>
+        <div class="flex justify-center pr-4">
+            <div class = "w-full h-full">
+                <Map></Map>
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
+</Layout>
