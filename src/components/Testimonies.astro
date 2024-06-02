@@ -1,0 +1,83 @@
+---
+const testimonials = [
+  {
+    image: '/public/Rectangle12.png',
+    link: '/link', //link to more testimonies
+    text: 'Testimonies'
+  },
+  {
+    image: '/public/image15.jpg',
+    // other testimonial data
+  },
+  {
+    image: '/public/image16.png',
+    // other testimonial data
+  },
+  {
+    image: '/public/image17.png',
+    // other testimonial data
+  },
+  {
+    image: '/public/image18.png',
+    // other testimonial data
+  }
+  
+];
+---
+<link rel="stylesheet" href="/src/styles/global.css">
+<style>
+    .testimonial-container {
+        width: 800px; /* width of rows */
+        margin: 0 auto;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* fix images to be in rows */
+      grid-auto-rows: 1fr;
+    }
+  
+    .testimonial-image {
+      height: 200px; /* height of images */
+    }
+
+    .grayscale-dark {
+      filter: grayscale(100%) brightness(50%);
+    
+    }
+
+    .testimonial-link:hover .grayscale-dark {
+      filter: grayscale(100%) brightness(30%);
+    }
+
+</style>
+  
+<section class="testimonials">
+    <div class="max-w-4xl mx-auto px-10">
+        <h2 class="text-6xl font-light opacity-25 text-gray-900 mb-8 font-sans">Our Clients</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-grid grid gap-4">
+                {testimonials.map((testimonial, index) => (
+                <div class="testimonial">
+                    {index === 0 ? (
+                    <a href={testimonial.link} class="relative testimonial-link">
+                        <img src={testimonial.image} alt="Testimonial" class="testimonial-image object-cover grayscale-dark" />
+                        <div class="absolute inset-5 flex flex-col items-start justify-center space-y-2">
+                            <span class="text-white text-3xl font-bold">{testimonial.text}</span>
+                            <span class="text-white text-sm">VIEW MORE → </span>
+                        </div>
+                    </a>
+                    ) : (
+                    <div class="aspect-w-1 aspect-h-1">
+                        <img src={testimonial.image} alt="Testimonial" class="testimonial-image object-cover w-full" />
+                    </div>
+                    )}
+                </div>
+                ))}
+            </div>
+        </div>
+        <div class="pt-5 flex justify-end">
+            <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">Gallery →</button>  
+        </div>
+    </div>
+</section>
+
