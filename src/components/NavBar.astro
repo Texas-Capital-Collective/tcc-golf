@@ -1,0 +1,21 @@
+---
+import NavBarLink from './elements/NavBarLink.astro';
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<nav class="flex justify-between items-center p-4 bg-white text-black border-b border-black">
+  <div class="flex items-center ml-48">
+    <a href="/">
+      <img src="/a&dglogo.jpg" alt="Logo" class="h-14 p-0.5"/>
+    </a>
+  </div>
+  <div class="flex justify-end flex-grow mr-48 font-roboto">
+    <NavBarLink href="" currPath={currentPath} title="MAIN"/>
+    <NavBarLink href="gallery" currPath={currentPath} title="GALLERY"/>
+    <NavBarLink href="pricing" currPath={currentPath} title="PRICING"/>
+    <NavBarLink href="certifications" currPath={currentPath} title="CERTIFICATIONS"/>
+    <NavBarLink href="contact" currPath={currentPath} title="CONTACTS"/>
+  </div>
+</nav>
