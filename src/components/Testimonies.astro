@@ -25,50 +25,27 @@ const testimonials = [
 ];
 ---
 <link rel="stylesheet" href="/src/styles/global.css">
-<style>
-    .testimonial-container {
-        width: 800px; /* width of rows */
-        margin: 0 auto;
-    }
-
-    .testimonial-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* fix images to be in rows */
-      grid-auto-rows: 1fr;
-    }
-  
-    .testimonial-image {
-      height: 200px; /* height of images */
-    }
-
-    .grayscale-dark {
-      filter: grayscale(100%) brightness(50%);
-    
-    }
-
-    .testimonial-link:hover .grayscale-dark {
-      filter: grayscale(100%) brightness(30%);
-    }
-
-</style>
   
 <section class="testimonials">
-    <div class="max-w-4xl mx-auto px-10">
+    <div class="max-w-4xl mx-auto px-14">
         <h2 class="text-6xl font-light opacity-25 text-gray-900 mb-8 font-sans">Our Clients</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-grid grid gap-4">
+        <div class="container mx-auto max-w-3xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {testimonials.map((testimonial, index) => (
                 <div class="testimonial">
                     {index === 0 ? (
+                    <div class = "grayscale hover:brightness-50 transition duration-500">
                     <a href={testimonial.link} class="relative testimonial-link">
-                        <img src={testimonial.image} alt="Testimonial" class="testimonial-image object-cover grayscale-dark" />
+                        <img src={testimonial.image} alt="Testimonial" class="w-full h-48 object-cover brightness-75" />
                         <div class="absolute inset-5 flex flex-col items-start justify-center space-y-2">
                             <span class="text-white text-3xl font-bold">{testimonial.text}</span>
                             <span class="text-white text-sm">VIEW MORE → </span>
                         </div>
+                    </div>
                     </a>
                     ) : (
                     <div class="aspect-w-1 aspect-h-1">
-                        <img src={testimonial.image} alt="Testimonial" class="testimonial-image object-cover w-full" />
+                        <img src={testimonial.image} alt="Testimonial" class="h-48 object-cover w-full" />
                     </div>
                     )}
                 </div>
