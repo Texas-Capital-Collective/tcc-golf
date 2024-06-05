@@ -1,0 +1,91 @@
+---
+const price_img_1 = "/pricing_test_1.jpeg";
+const price_img_2 = "/pricing_test_2.jpeg";
+const price_img_3 = "/pricing_test_3.png";
+---
+
+<link rel="stylesheet" href="/src/styles/global.css" />
+<div class="flex justify-center py-8">
+    <!-- dev notes: the actual container for pricing -->
+    <div class="w-10/12
+    lg:pb-16">
+        <!-- dev notes: div to create the image overhang -->
+        <div
+            class="bg-zinc-50 grid grid-cols-10 py-4
+        px-0
+        md:px-4
+        lg:px-12"
+        >
+            <div
+                class="col-span-6
+            sm:flex
+            sm:items-center"
+            >
+                <div
+                    class="flex items-center grid
+                grid-cols-1
+                sm:grid-cols-2
+                lg:-mb-16"
+                >
+                    <div class="p-4
+                    sm:p-2">
+                        <img src={price_img_1} />
+                        <br />
+                        <img src={price_img_2} />
+                    </div>
+
+                    <div class="p-4
+                    sm:p-2">
+                        <img src={price_img_3} />
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="col-span-4 flex
+            items-center
+            sm:items-start
+            p-2
+            sm:p-4"
+            >
+                <div>
+                    <p class="font-extralight text-stone-300 text-4xl mb-4">
+                        Pricing
+                    </p>
+
+                    <p
+                        class="font-light
+                    text-xs
+                    md:text-sm
+                    lg:text-base"
+                    >
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </p>
+
+                    <div
+                        class="mt-8
+                    py-1
+                    lg:py-5"
+                    >
+                        <a
+                            href="/pricing"
+                            class="font-sans text-xs tracking-[.2em] border-black border-2 hover:bg-black hover:text-white
+                        px-4
+                        lg:px-12
+                        py-2
+                        lg:py-6"
+                        >
+                            READ MORE →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
