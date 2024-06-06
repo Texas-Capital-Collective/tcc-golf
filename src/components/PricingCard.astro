@@ -1,0 +1,30 @@
+---
+interface Props {
+    title: string
+    text: string
+    img_src: string
+}
+
+const { title, text, img_src } = Astro.props;
+---
+
+<div class="w-2/3">
+    <div class="flex">
+            <div class="w-3/5">
+                <img src={img_src}>
+            </div>
+
+            <div class="w-2/5 bg-gray-100">
+                <p> {title} {text} </p>
+
+                <div>
+                    <button>Test</button>
+                </div>
+
+            </div>
+
+
+
+
+    </div>
+</div>
