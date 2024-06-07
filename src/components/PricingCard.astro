@@ -1,0 +1,38 @@
+---
+interface Props {
+    title: string
+    text: string
+    img_src: string
+}
+
+const { title, text, img_src } = Astro.props;
+
+import enUs from '@assets/lang/en_us.json';
+---
+
+<div class="w-2/3">
+    <div class="flex">
+            <div class="w-3/5 bg-gray-100">
+                <img src={img_src} class="w-full h-full object-cover">
+            </div>
+
+            <div class="w-2/5 bg-gray-50">
+                <div class="p-5">
+                    <div class="text-base sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-light opacity-25">
+                        <p> {title} </p>
+                    </div>
+
+                   <div class="pt-10"> 
+                        <p> {text} </p>
+                   </div>
+
+                    <div class="py-10">
+                        <div class="w-2/5 text-xs bg-white py-4 text-center tracking-[.2em]">
+                            <button>{enUs.pricing.view_more}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
