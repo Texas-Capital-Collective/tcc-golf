@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro'
 
 const images = [
-    "/gallery_test_1.png", 
     "/gallery_test_2.png", 
+    "/gallery_test_1.png", 
     "/gallery_test_3.png", 
     "/gallery_test_4.png", 
     "/gallery_test_5.png", 
@@ -12,7 +12,15 @@ const images = [
     "/gallery_test_8.png", 
     "/gallery_test_9.png", 
     "/gallery_test_10.png", 
-]
+];
+
+const total_img = images.length
+
+const lg_img_displayed = 10
+const md_img_displayed = 8
+const sm_img_displayed = 4
+const img_displayed = 1
+
 ---
 
 <link rel="stylesheet" href="/src/styles/global.css" />
@@ -45,45 +53,17 @@ const images = [
             lg:grid-cols-5
             lg:grid-rows-2">
 
-                <div class="p-3">
-                    <img src={images[0]}>
-                </div>
-
-                <div class="hidden sm:block p-3">
-                    <img src={images[1]}>
-                </div>
-
-                <div class="hidden sm:block p-3">
-                    <img src={images[2]}>
-                </div>
-
-                <div class="hidden sm:block p-3">
-                    <img src={images[3]}>
-                </div>
-                
-                <div class="hidden md:block p-3">
-                    <img src={images[4]}>
-                </div>
-
-                <div class="hidden md:block p-3">
-                    <img src={images[5]}>
-                </div>
-
-                <div class="hidden md:block p-3">
-                    <img src={images[6]}>
-                </div>
-
-                <div class="hidden md:block p-3">
-                    <img src={images[7]}>
-                </div>
-
-                <div class="hidden lg:block p-3">
-                    <img src={images[8]}>
-                </div>
-
-                <div class="hidden lg:block p-3">
-                    <img src={images[9]}>
-                </div>
+                {images.map((image, index) => (
+                    <div id={typeof(index)} class={"p-3 " + 
+                        ((index >= md_img_displayed) ? "lg:block " : "") + 
+                        ((index >= sm_img_displayed && index < md_img_displayed) ? "md:block " : "") + 
+                        ((index >= img_displayed && index < sm_img_displayed) ? "sm:block " : "") + 
+                        ((index >= img_displayed) ? " hidden" : "")
+                    }>
+                                
+                        <img src={image} />
+                    </div>
+                ))}
             </div>
 
             <!-- controls -->
@@ -93,27 +73,27 @@ const images = [
                     <p class="text-stone-300 tracking-[.2em] text-xl
                     hidden
                     lg:block">
-                        01 ╱ 01
+                        01 ╱ 10
                     </p>
 
                     <p class="text-stone-300 tracking-[.2em] text-xl
                     hidden
                     md:block
                     lg:hidden">
-                        01 ╱ 02
+                        01 ╱ 04
                     </p>
 
                     <p class="text-stone-300 tracking-[.2em] text-xl
                     hidden
                     sm:block
                     md:hidden">
-                        01 ╱ 04
+                        01 ╱ 02
                     </p>
 
                     <p class="text-stone-300 tracking-[.2em] text-xl
                     block
                     sm:hidden">
-                        01 ╱ 10
+                        01 ╱ 01
                     </p>
                 </div>
 
