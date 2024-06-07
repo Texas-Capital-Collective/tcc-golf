@@ -1,0 +1,78 @@
+---
+const hero_img_1 = "/hero_test_1.png";
+
+const title_first_half = "Academy &"
+const title_second_half = "Dallas Golf"
+
+const img_num = "01";
+const max_img_num = "01"
+---
+
+<link rel="stylesheet" href="/src/styles/global.css" />
+<div class="flex justify-center py-8">
+
+    <div class={`w-10/12 flex justify-center bg-[url(\'${hero_img_1}\')] sm:bg-none py-52 sm:py-0`}>
+
+        <!-- text side -->
+        <div class="grid sm:w-2/5 grid-rows-1 sm:grid-rows-3">
+
+            <div class="hidden sm:block">
+            </div>
+
+            <div class="flex items-center text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                
+                <!-- dev: for smallest width screen -->
+                <div class="sm:hidden">
+                    <p class="font-light text-white">
+                        {title_first_half}
+                    </p>
+                    <p class="font-bold text-white">
+                        {title_second_half}
+                    </p>
+                </div>
+
+                <div class="hidden sm:block">
+                    <p class="font-light text-stone-300 hidden sm:block">
+                        {title_first_half}
+                    </p>
+                    <p class="font-bold text-zinc-800 hidden sm:block">
+                        {title_second_half}
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-6 hidden sm:block">
+                <div>
+                    <button class="border border-zinc-300 bg-white w-10 h-10 mr-4">
+                        ←
+                    </button>
+
+                    <button class="border border-zinc-200 bg-zinc-100 w-10 h-10">
+                        →
+                    </button>
+                </div>
+
+                <div class="flex sm:mt-8 md:mt-12 lg:mt-16">
+                    <p class="text-stone-300 tracking-[.2em] text-xl">
+                        {img_num}
+                    </p>
+
+                    <p class="text-stone-300 tracking-[.2em] text-xl">
+                        ╱
+                    </p>
+
+                    <p class="text-stone-300 tracking-[.2em] text-xl">
+                        {max_img_num}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- image side -->
+        <div class="justify-end items-center w-3/5 hidden sm:flex">
+            <img src={hero_img_1}>
+        </div>
+
+    </div>
+</div>
