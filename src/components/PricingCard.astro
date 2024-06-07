@@ -6,6 +6,8 @@ interface Props {
 }
 
 const { title, text, img_src } = Astro.props;
+
+import enUs from '@assets/lang/en_us.json';
 ---
 
 <div class="w-2/3">
@@ -26,7 +28,7 @@ const { title, text, img_src } = Astro.props;
 
                     <div class="py-10">
                         <div class="w-2/5 text-xs bg-white py-4 text-center tracking-[.2em]">
-                            <button>VIEW MORE →</button>
+                            <button>{enUs.pricing.view_more}</button>
                         </div>
                     </div>
                 </div>

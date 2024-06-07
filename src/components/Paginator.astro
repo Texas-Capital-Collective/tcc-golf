@@ -1,0 +1,29 @@
+---
+interface Props {
+    page: string
+    max_page: string
+}
+
+const { page, max_page } = Astro.props;
+---
+<div class="flex flex-row text-base sm:text-xl md:text-xl lg:text-2xl xl:text-3xl">
+    <div>
+        <p class=""> {page} </p>
+    </div>
+
+    <div class="pl-7 font-light opacity-25">
+        <p class=""> / </p>
+    </div>
+
+    <div class="pl-7 font-light opacity-25">
+        <p class=""> {max_page} </p>
+    </div>
+
+    <div class="pl-7">
+        <button class="border-2 border-gray-100 px-2 text-center font-light opacity-70"> ← </button> 
+    </div>
+
+    <div class="pl-6">
+        <button class="border-2 border-gray-100 bg-gray-100 px-2 text-center font-light opacity-70"> → </button> 
+    </div>
+</div>

@@ -2,20 +2,24 @@
 import enUs from '@assets/lang/en_us.json';
 import Layout from "../layouts/Layout.astro";
 import PricingCard from '@components/PricingCard.astro';
+import Paginator from '@components/Paginator.astro'
 
 const pricing_img_1 = "/pricing-page-1.png";
 const pricing_img_2 = "/pricing-page-2.png";
+
+const page='01';
+const max_page='05'; 
 ---
 
 <Layout title="Welcome to Astro">
     <div class="font-sans py-8 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20">
         <div class="">
                 <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-light opacity-25">
-                    <p>Pricing</p>
+                    <p>{enUs.pricing.pricing}</p>
                 </div>        
 
                 <div class="text-base sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-lg font-bold">
-                    <p>A&DG</p>
+                    <p>{enUs.pricing.adg}</p>
                 </div>
         </div>
 
@@ -26,25 +30,29 @@ const pricing_img_2 = "/pricing-page-2.png";
         <div class='pt-7'>
             <PricingCard 
             img_src={pricing_img_1}
-            title='Sample Pricing 1'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'>
+            title={enUs.pricing.card_title_1}
+            text={enUs.lorem_ipsum}>
             </PricingCard>
         </div>
 
         <div class='pt-10'>
             <PricingCard 
             img_src={pricing_img_2} 
-            title='Sample Pricing 2'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'>
+            title={enUs.pricing.card_title_2}
+            text={enUs.lorem_ipsum}>
             </PricingCard>
         </div>
 
         <div class='pt-10'>
                 <PricingCard 
                 img_src={pricing_img_2} 
-                title='Sample Pricing 3'
-                text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'>
+                title={enUs.pricing.card_title_3}
+                text={enUs.lorem_ipsum}>
                 </PricingCard>
         </div>
+
+        <div class="flex flexrow pt-10">
+            <Paginator page={page} max_page={max_page}></Paginator>
+        </div> 
     </div>
 </Layout>
