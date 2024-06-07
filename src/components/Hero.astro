@@ -7,62 +7,97 @@ const hero_img_1 = "/hero_test_1.png";
 const hero_img_2 = "/hero_test_2.png";
 ---
 
-<style>
-    * {
-        border: 1px solid red;
-    }
-</style>
-
 <link rel="stylesheet" href="/src/styles/global.css" />
+<div class="flex justify-center py-8">
 
-<div class="flex grid grid-cols-5 grid-rows-1 font-sans py-8">
-    <!-- text side -->
-    <div class="flex grid grid-rows-3 col-span-2">
-        <div></div>
+    <div class="w-10/12 flex justify-center
+    bg-[url('/hero_test_2.png')]
+    sm:bg-none
 
-        <div
-            class="flex pl-10 sm:pl-12 md:pl-18 lg:pl-28 xl:pl-32 items-center"
-        >
-            <div
-                class="flex flex-col items-end items-end text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-            >
-                <p class="font-light text-stone-300">Academy &</p>
-                <p class="font-bold text-zinc-800">Dallas Golf</p>
+    py-52
+    sm:py-0">
+
+        <!-- text side -->
+        <div class="grid 
+        sm:w-2/5
+
+        grid-rows-1
+        sm:grid-rows-3">
+            <div class="
+            hidden 
+            sm:block">
             </div>
-        </div>
 
-        <div
-            class="flex flex-col pl-10 sm:pl-12 md:pl-18 lg:pl-28 xl:pl-32 py-2"
-        >
-            <div>
+            <div class="flex items-center">
+                <div
+                    class="
+                    text-7xl 
+                    sm:text-4xl
+                    md:text-5xl 
+                    lg:text-6xl
+                    xl:text-7xl"
+                >
+
+                    <!-- dev: janky solution -->
+                    <p class="font-light text-white 
+                    block
+                    sm:hidden">
+                        Academy &
+                    </p>
+                    <p class="font-bold text-white
+                    block
+                    sm:hidden">
+                        Dallas Golf
+                    </p>
+
+                    <p class="font-light text-stone-300 
+                    hidden
+                    sm:block">
+                        Academy &
+                    </p>
+                    <p class="font-bold text-zinc-800
+                    hidden
+                    sm:block">
+                        Dallas Golf
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6
+            hidden 
+            sm:block">
                 <div>
-                    <button
-                        class="border border-zinc-300 bg-white w-6 h-6
-                    sm:w-8 sm:h-8
-                    md:w-9 md:h-9
-                    lg:w-10 lg:h-10
-                    xl:w-11 xl:h-11"
-                        >←</button
-                    >
-                    <button
-                        class="border border-zinc-200 bg-zinc-100 w-6 h-6
-                    sm:w-8 sm:h-8
-                    md:w-9 md:h-9
-                    lg:w-10 lg:h-10
-                    xl:w-11 xl:h-11"
-                        >→</button
-                    >
+                    <button class="border border-zinc-300 bg-white 
+                    w-10 
+                    h-10
+                    mr-4">
+                        ←
+                    </button>
+
+                    <button class="border border-zinc-200 bg-zinc-100
+                    w-10 
+                    h-10">
+                        →
+                    </button>
                 </div>
 
-                <div class="dev-box pt-10">
-                    <p class="text-stone-300 tracking-[.2em]">01 ╱ 02</p>
+                <div class="
+                sm:mt-8
+                md:mt-12
+                lg:mt-16">
+                    <p class="text-stone-300 tracking-[.2em] text-xl">
+                        01 ╱ 02
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- image side -->
-    <div class="flex col-span-3 justify-center items-center">
-        <img src={hero_img_2} />
+        <!-- image side -->
+        <div class="justify-end items-center w-3/5
+        hidden 
+        sm:flex">
+            <img src={hero_img_2}>
+        </div>
+
     </div>
 </div>
