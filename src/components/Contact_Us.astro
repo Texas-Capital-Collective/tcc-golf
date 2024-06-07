@@ -1,23 +1,24 @@
 ---
 const contact_img_1 = "/contact_us_test_1.png";
+
+const title = "Contact Us"
+
+const button_text = "SEND EMAIL →"
 ---
 
 <link rel="stylesheet" href="/src/styles/global.css" />
 <div class="flex justify-center py-8">
-    <div class="w-10/12
-    py-16">
+    <div class="w-10/12 py-16">
 
         <div>
             <p class="font-extralight font-sans text-stone-300 text-4xl mb-4">
-                Contact Us
+                {title}
             </p>
         </div>
 
         <div class="flex">
 
-            <div class="flex-none 
-            w-full
-            md:w-5/12">
+            <div class="flex-none w-full md:w-5/12">
                 <form class="flex flex-col h-full text-sm mr-4">
                     <div>
                         <input class="w-full bg-zinc-100 py-2 px-4 mb-2" id="name" type="text" placeholder="Name">
@@ -38,20 +39,15 @@ const contact_img_1 = "/contact_us_test_1.png";
             </div>
 
 
-            <div class="flex-initial
-            hidden
-            md:flex">
+            <div class="flex-initial hidden md:flex">
                 <img src={contact_img_1}>
             </div>
         </div>
 
         <div class="mt-12">
             <button
-                class="font-sans text-xs tracking-[.2em] bg-black text-white
-            px-12
-            py-6"
-            >
-                SEND EMAIL →
+                class="font-sans text-xs tracking-[.2em] bg-black text-white px-12 py-6">
+                {button_text}
             </button>
         </div>
     </div>
