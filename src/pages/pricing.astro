@@ -22,37 +22,10 @@ const max_page='05';
                     <p>{enUs.pricing.adg}</p>
                 </div>
         </div>
-
-        <div class="w-2/3 border-gray-100 pt-3">
-            <hr>
+        <div class="pt-5">
+            <a href=""
+                <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">{enUs.contact_us.contact_button}</button>
+            </a>
         </div>
-
-        <div class='pt-7'>
-            <PricingCard 
-            img_src={pricing_img_1}
-            title={enUs.pricing.card_title_1}
-            text={enUs.lorem_ipsum}>
-            </PricingCard>
-        </div>
-
-        <div class='pt-10'>
-            <PricingCard 
-            img_src={pricing_img_2} 
-            title={enUs.pricing.card_title_2}
-            text={enUs.lorem_ipsum}>
-            </PricingCard>
-        </div>
-
-        <div class='pt-10'>
-                <PricingCard 
-                img_src={pricing_img_2} 
-                title={enUs.pricing.card_title_3}
-                text={enUs.lorem_ipsum}>
-                </PricingCard>
-        </div>
-
-        <div class="flex flexrow pt-10">
-            <Paginator page={page} max_page={max_page}></Paginator>
-        </div> 
     </div>
 </Layout>
