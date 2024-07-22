@@ -5,18 +5,21 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<div class="px-48">
-  <nav class="flex justify-between items-center p-4 bg-white text-black">
-    <div class="">
-      <a href="/" class="flex items-center">
-        <img src="/src/assets/a&dglogo.jpg" alt="Logo" class="h-14"/>
-      </a>
-    </div>
-    <div class="flex justify-end flex-grow px-24 font-roboto">
-      <NavBarLink href="main" currPath={currentPath} title="MAIN"/>
-      <NavBarLink href="pricing" currPath={currentPath} title="PRICING"/>
-      <NavBarLink href="certifications" currPath={currentPath} title="CERTIFICATIONS"/>
-      <NavBarLink href="contact" currPath={currentPath} title="CONTACTS"/>
-    </div>
-  </nav>
+<div class="flex flex-row justify-center w-full">
+  <div class="w-10/12">
+    <nav class="flex justify-between items-center py-4 bg-white text-black">
+      <div class="w-14">
+        <a href="/" class="flex items-center">
+          <img src="/src/assets/a&dglogo.jpg" alt="Logo" class="h-14 aspect-square"/>
+        </a>
+      </div>
+      <div class="flex justify-center flex-grow px-0 sm:px-24 font-roboto">
+        <NavBarLink href="" currPath={currentPath} title="MAIN"/>
+        <NavBarLink href="certifications" currPath={currentPath} title="CERTIFICATIONS"/>
+        <NavBarLink href="contact" currPath={currentPath} title="CONTACTS"/>
+      </div>
+      <div>
+      </div>
+    </nav>
+  </div>
 </div>

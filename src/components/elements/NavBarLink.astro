@@ -2,5 +2,5 @@
 const { href, currPath, title } = Astro.props;
 ---
 
-<a href={`/${href}`} class={`py-2 text-black no-underline mx-8 font-sans text-xs tracking-[.2em]
+<a href={`/${href}`} class={`py-0.5 px-3 text-black no-underline mx-2 sm:mx-8 font-sans text-xs tracking-[.2em]
 ${currPath == href ? "border-y border-y-black" : "border-0 hover:underline"}`}>{title}</a>

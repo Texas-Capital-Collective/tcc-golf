@@ -37,8 +37,8 @@ const max_page = "05"
             <hr>
 
             <!-- images -->
-            <div class="grid -mx-3 py-3 grid-cols-1 grid-rows-1 sm:grid-cols-2 sm:grid-rows-2
-            md:grid-cols-4 md:grid-rows-2 lg:grid-cols-5 lg:grid-rows-2">
+            <div class="grid -mx-3 py-3 grid-cols-1 grid-rows-1 sm:grid-cols-1
+            md:grid-cols-1 lg:grid-cols-2 ">
 
                 {images.map((image, index) => (
 
@@ -56,7 +56,7 @@ const max_page = "05"
             </div>
 
             <!-- controls -->
-            <div class="flex items-center mt-6">
+            <div class="flex items-center mt-6 hidden">
                 <div class="flex mr-4">
                     <p class="text-stone-300 tracking-[.2em] text-xl">
                         {page}
@@ -71,7 +71,7 @@ const max_page = "05"
                     </p>
                 </div>
 
-                <div>
+                <div className="hidden">
                     <button class="border border-zinc-300 bg-white w-10 h-10 mr-4">
                         ←
                     </button>
