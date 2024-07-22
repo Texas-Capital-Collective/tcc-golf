@@ -9,8 +9,9 @@ const pricing_img_2 = "/pricing-page-2.png";
 
 const page='01';
 const max_page='05'; 
----
 
+const button_link = "/contact"
+---
 <Layout title="Welcome to Astro">
     <div class="font-sans py-8 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20">
         <div class="">
@@ -22,9 +23,11 @@ const max_page='05';
                     <p>{enUs.pricing.adg}</p>
                 </div>
         </div>
-        <div class="pt-5">
-            <a href=""
-                <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">{enUs.contact_us.contact_button}</button>
+        <div class="mt-10">
+            <a href={button_link}>
+                <button class="bg-black text-white py-6 px-12 text-xs tracking-[.2em]">
+                    {enUs.contact_us.contact_button}
+                </button>
             </a>
         </div>
     </div>
